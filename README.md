@@ -43,7 +43,7 @@ or
 yarn start
 ```
 
-#### Build the app (automatic)
+#### Build the app (Current OS)
 
 ```
 npm run package
@@ -51,6 +51,15 @@ npm run package
 or
 ```
 yarn package
+```
+#### Build the app (Mac, Linux, Win)
+
+```
+npm run package-all
+```
+or
+```
+yarn package-all
 ```
 
 #### Build the app (manual)

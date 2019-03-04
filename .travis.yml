@@ -1,0 +1,7 @@
+sudo: false
+language: node_js
+node_js:
+  - node
+script:
+  - yarn prod
+fail_fast: true

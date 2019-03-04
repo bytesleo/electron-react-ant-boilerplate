@@ -1,27 +1,39 @@
-const webpack = require("webpack");
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BabiliPlugin = require("babili-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const postcssPresetEnv = require("postcss-preset-env");
-const lessToJs = require("less-vars-to-js");
-const fs = require("fs");
+import fs from "fs";
+import path from "path";
+import webpack from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import BabiliPlugin from "babili-webpack-plugin";
+import postcssPresetEnv from "postcss-preset-env";
+import lessToJs from "less-vars-to-js";
+import TerserPlugin from "terser-webpack-plugin";
 
-// Theme
 const themeLess = path.join(__dirname, "src/themes/antd-theme.less");
 const theme = lessToJs(fs.readFileSync(themeLess, "utf8"));
-
-// Any directories you will be adding code/files into, need to be added to this array so webpack will pick them up
 const defaultInclude = path.resolve(__dirname, "src");
 
-module.exports = {
+export default {
+  output: {
+    path: __dirname + "/dist",
+    filename: "bundle.js"
+  },
   module: {
     rules: [
       {
+        test: /\.jsx?$/,
+        use: {
+          loader: "babel-loader"
+        },
+        include: defaultInclude
+      },
+      {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          { loader: "css-loader" },
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
           {
             loader: "postcss-loader",
             options: {
@@ -30,11 +42,6 @@ module.exports = {
             }
           }
         ],
-        include: defaultInclude
-      },
-      {
-        test: /\.jsx?$/,
-        use: [{ loader: "babel-loader" }],
         include: defaultInclude
       },
       {
@@ -67,16 +74,13 @@ module.exports = {
   },
   target: "electron-renderer",
   plugins: [
-    new HtmlWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "bundle.css",
-      chunkFilename: "[id].css"
+    new HtmlWebpackPlugin({
+      template: "index.html"
     }),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
+    new TerserPlugin(),
     new BabiliPlugin()
   ],
   stats: {

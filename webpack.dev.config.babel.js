@@ -1,26 +1,34 @@
-const webpack = require("webpack");
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { spawn } = require("child_process");
-const postcssPresetEnv = require("postcss-preset-env");
-const lessToJs = require("less-vars-to-js");
-const fs = require("fs");
+import fs from "fs";
+import path from "path";
+import webpack from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { spawn } from "child_process";
+import postcssPresetEnv from "postcss-preset-env";
+import lessToJs from "less-vars-to-js";
 
-// Theme
 const themeLess = path.join(__dirname, "src/themes/antd-theme.less");
 const theme = lessToJs(fs.readFileSync(themeLess, "utf8"));
-
-// Any directories you will be adding code/files into, need to be added to this array so webpack will pick them up
 const defaultInclude = path.resolve(__dirname, "src");
 
-module.exports = {
+export default {
   module: {
     rules: [
       {
+        test: /\.jsx?$/,
+        use: {
+          loader: "babel-loader"
+        },
+        include: defaultInclude
+      },
+      {
         test: /\.css$/,
         use: [
-          { loader: "style-loader", options: { singleton: true } },
-          { loader: "css-loader" },
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
           {
             loader: "postcss-loader",
             options: {
@@ -29,13 +37,6 @@ module.exports = {
             }
           }
         ],
-        include: defaultInclude
-      },
-      {
-        test: /\.jsx?$/,
-        use: {
-          loader: "babel-loader"
-        },
         include: defaultInclude
       },
       {
@@ -68,7 +69,9 @@ module.exports = {
   },
   target: "electron-renderer",
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "index.html"
+    }),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("development")
     })
