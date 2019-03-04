@@ -1,6 +1,6 @@
 # electron-react-ant-boilerplate
 
-[![NPM version](https://badge.fury.io/js/electron-react-ant-boilerplate.svg)](https://npmjs.org/package/electron-react-ant-boilerplate) [![Build Status](https://travis-ci.org/kevoj/electron-react-ant-boilerplate.svg?branch=master)](https://travis-ci.org/kevoj/electron-react-ant-boilerplate) [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://raw.githubusercontent.com/kevoj/electron-react-ant-boilerplate/master/LICENSE)
+[![NPM version](https://badge.fury.io/js/electron-react-ant-boilerplate.svg)](https://npmjs.org/package/electron-react-ant-boilerplate) [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://raw.githubusercontent.com/kevoj/electron-react-ant-boilerplate/master/LICENSE)
 
 > Electron + Webpack4 + React + PostCSS + Babel 7 (ES6) + Ant
 
