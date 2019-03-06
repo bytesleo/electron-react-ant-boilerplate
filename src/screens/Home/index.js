@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import "./style.scss";
 import { Layout, Menu, Breadcrumb } from "antd";
-import "./style.css";
+import HelloWorld from "../../components/HelloWorld";
 
 const { Header, Content, Footer } = Layout;
 
@@ -31,9 +32,7 @@ class Home extends Component {
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb>
-          <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>
-            Hello World!
-          </div>
+          <HelloWorld />
         </Content>
         <Footer style={{ textAlign: "center" }}>
           electron-react-ant-boilerplate ©2019
