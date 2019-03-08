@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./style.scss";
 import { Layout, Menu, Breadcrumb } from "antd";
-import HelloWorld from "../../components/HelloWorld";
+import { IMAGES } from "@/config";
+import HelloWorld from "@/components/HelloWorld";
 
 const { Header, Content, Footer } = Layout;
 
@@ -35,6 +36,7 @@ class Home extends Component {
           <HelloWorld />
         </Content>
         <Footer style={{ textAlign: "center" }}>
+          <img className="logo-electron" src={IMAGES.LOGO} />
           electron-react-ant-boilerplate ©2019
         </Footer>
       </Layout>

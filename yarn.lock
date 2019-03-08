@@ -1494,6 +1494,13 @@ babel-plugin-minify-type-constructors@^0.1.2:
   dependencies:
     babel-helper-is-void-0 "^0.1.1"
 
+babel-plugin-relative-path-import@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-relative-path-import/-/babel-plugin-relative-path-import-2.0.1.tgz#7d375931ca2153b5c61344098adb822ad638fef1"
+  integrity sha512-jOtB/Lef7QFNAEGRV4VmUvP/VsizpvOVonrTeTTE8TxVIR0FL/wJTzFQp4ei5Jf5+EWklFORmnsXOjLxvNVeRg==
+  dependencies:
+    slash "^1.0.0"
+
 babel-plugin-transform-inline-consecutive-adds@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-inline-consecutive-adds/-/babel-plugin-transform-inline-consecutive-adds-0.1.2.tgz#5442e9f1c19c78a7899f8a4dee6fd481f61001f5"

@@ -15,7 +15,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         use: {
           loader: "babel-loader"
         }
@@ -101,7 +101,7 @@ export default {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("development")
     }),
-    new AntdScssThemePlugin("./src/themes/default.scss")
+    new AntdScssThemePlugin("./src/themes/variables.scss")
   ],
   devtool: "cheap-source-map",
   devServer: {

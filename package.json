@@ -1,6 +1,6 @@
 {
   "name": "electron-react-ant-boilerplate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Electron, Webpack, React, Babel 7, ES6, PostCSS, SASS, Ant Design",
   "license": "MIT",
   "private": false,
@@ -64,8 +64,9 @@
     "antd-scss-theme-plugin": "^1.0.7",
     "babel-loader": "^8.0.5",
     "babel-plugin-import": "^1.11.0",
+    "babel-plugin-relative-path-import": "^2.0.1",
     "babili-webpack-plugin": "^0.1.2",
-    "css-loader": "^2.1.0",
+    "css-loader": "^2.1.1",
     "electron": "^4.0.7",
     "electron-builder": "^20.38.5",
     "file-loader": "^3.0.1",
@@ -124,5 +125,33 @@
       "buildResources": "resources",
       "output": "release"
     }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": true
+        }
+      ],
+      "@babel/plugin-proposal-class-properties",
+      "@babel/transform-runtime",
+      [
+        "babel-plugin-relative-path-import",
+        {
+          "paths": [
+            {
+              "rootPathPrefix": "@",
+              "rootPathSuffix": "src"
+            }
+          ]
+        }
+      ]
+    ]
   }
 }

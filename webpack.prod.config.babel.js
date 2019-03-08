@@ -20,7 +20,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         use: {
           loader: "babel-loader"
         }
@@ -106,7 +106,7 @@ export default {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
-    new AntdScssThemePlugin("./src/themes/default.scss"),
+    new AntdScssThemePlugin("./src/themes/variables.scss"),
     new TerserPlugin(),
     new BabiliPlugin()
   ],
