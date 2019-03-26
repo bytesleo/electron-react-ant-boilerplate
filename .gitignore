@@ -7,6 +7,8 @@ release/
 .tmp/
 dist/
 node_modules/
+docs/
+__snapshots__
 *.compiled.*
 
 # Folder config file #

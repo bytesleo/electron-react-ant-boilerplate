@@ -1,9 +1,10 @@
+// Libs
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
+// Screens
+import Home from "@/screens/Home/Home";
 
-import Home from "@/screens/Home";
-
-const App = () => (
+const Routes = () => (
   <HashRouter>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -11,4 +12,4 @@ const App = () => (
   </HashRouter>
 );
 
-export default App;
+export default Routes;

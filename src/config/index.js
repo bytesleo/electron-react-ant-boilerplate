@@ -1,9 +1,6 @@
 // Example url API
 export const URL_API = "http://localhost:8000";
 
-// Example Url socket
-export const URL_WS = "http://localhost:8001";
-
 // Example Key JWT
 export const KEY_JWT = "ABC123456";
 
