@@ -12,8 +12,8 @@
 - React 16
 - ES6
 - PostCSS
-- SASS
-- Ant Design
+- Sass (Injection by modules and in the traditional way)
+- Ant Design (Global theme based on the Less Ant variables)
 - Jest
 - Enzyme
 - Eslint
