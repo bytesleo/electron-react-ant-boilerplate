@@ -3,11 +3,11 @@ import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 // Module
-import Breadcrumb from "@/components/Home/Breadcrumb";
+import Path from "@/components/Home/Path";
 
-describe("Component Breadcrumb", () => {
+describe("Component Path", () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<Breadcrumb />);
+    const component = shallow(<Path />);
     expect(toJson(component)).toMatchSnapshot();
 
   });

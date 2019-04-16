@@ -1,12 +1,13 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "presets": ["@babel/env", "@babel/react"],
   "plugins": [
     [
       "import",
       {
         "libraryName": "antd",
         "style": true
-      }
+      },
+      "ant"
     ],
     "@babel/plugin-proposal-class-properties",
     "@babel/transform-runtime",
@@ -25,19 +26,13 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
-      ]
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
     },
     "test": {
-      "plugins": [
-        "@babel/plugin-transform-modules-commonjs"
-      ]
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
     },
     "production": {
-      "plugins": [
-        "transform-react-remove-prop-types"
-      ]
+      "plugins": ["transform-react-remove-prop-types"]
     }
   }
 }

@@ -2,22 +2,22 @@
 import React, { Component } from "react";
 import { Breadcrumb } from "antd";
 // Styles
-import "./Breadcrumb.scss";
+import styles from "./Path.scss";
 
 /**
- * BreadcrumbApp
+ * Path
  *
- * @class BreadcrumbApp
+ * @class Path
  * @extends {Component}
  */
-class BreadcrumbApp extends Component {
+class Path extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <Breadcrumb className="home__breadcrumb">
+      <Breadcrumb className={styles.path}>
         <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>List</Breadcrumb.Item>
         <Breadcrumb.Item>App</Breadcrumb.Item>
@@ -26,4 +26,4 @@ class BreadcrumbApp extends Component {
   }
 }
 
-export default BreadcrumbApp;
+export default Path;

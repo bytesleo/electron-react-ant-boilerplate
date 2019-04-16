@@ -4,7 +4,7 @@ import { render } from "react-dom";
 // Routes
 import Routes from "./routes";
 // Styles
-import "@/themes/App.scss";
+import "@/themes/App.global.scss";
 
 const App = Routes;
 render(<App />, document.getElementById("root"));

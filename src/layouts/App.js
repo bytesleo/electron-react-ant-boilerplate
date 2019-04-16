@@ -3,18 +3,18 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Layout } from "antd";
 // Styles
-import "./App.scss";
+import styles from "./App.scss";
 // Components
 import Header from "@/components/@shared/Header";
 import Footer from "@/components/@shared/Footer";
 
 /**
- * LayoutApp
+ * App
  *
- * @class LayoutApp
+ * @class App
  * @extends {Component}
  */
-class LayoutApp extends Component {
+class App extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired
   };
@@ -28,11 +28,13 @@ class LayoutApp extends Component {
     return (
       <Layout>
         <Header />
-        <Layout className="layout">{children}</Layout>
+        <Layout className={styles.app}>
+          <Layout.Content>{children}</Layout.Content>
+        </Layout>
         <Footer />
       </Layout>
     );
   }
 }
 
-export default LayoutApp;
+export default App;

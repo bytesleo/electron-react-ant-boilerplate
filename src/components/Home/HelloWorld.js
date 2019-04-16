@@ -1,7 +1,7 @@
 // Libs
 import React, { Component } from "react";
 // Styles
-import "./HelloWorld.scss";
+import styles from "./HelloWorld.scss";
 
 /**
  * HelloWorld
@@ -15,7 +15,7 @@ class HelloWorld extends Component {
   }
 
   render() {
-    return <div className="home__hello-world">Hello World!</div>;
+    return <div className={styles.helloWorld}>Hello World!</div>;
   }
 }
 

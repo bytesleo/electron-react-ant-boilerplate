@@ -1,15 +1,13 @@
 // Libs
 import React, { Component } from "react";
-import { Layout } from "antd";
 // Styles
-import "./Home.scss";
+import styles from "./Home.scss";
 // Layouts
-import LayoutApp from "@/layouts/App";
+import Layout from "@/layouts/App";
 // Components
-import Breadcrumb from "@/components/Home/Breadcrumb";
+import Path from "@/components/Home/Path";
 import HelloWorld from "@/components/Home/HelloWorld";
 
-const { Content } = Layout;
 /**
  * Home
  *
@@ -23,12 +21,12 @@ class Home extends Component {
 
   render() {
     return (
-      <LayoutApp>
-        <Content className="home">
-          <Breadcrumb />
+      <Layout>
+        <div className={styles.home}>
+          <Path />
           <HelloWorld />
-        </Content>
-      </LayoutApp>
+        </div>
+      </Layout>
     );
   }
 }

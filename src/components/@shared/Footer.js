@@ -2,31 +2,29 @@
 import React, { Component } from "react";
 import { Layout } from "antd";
 // Styles
-import "./Footer.scss";
+import styles from "./Footer.scss";
 // Config
 import { IMAGES } from "@/config";
 
-const { Footer } = Layout;
-
 /**
- * FooterApp
+ * Footer
  *
- * @class FooterApp
+ * @class Footer
  * @extends {Component}
  */
-class FooterApp extends Component {
+class Footer extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <Footer className="footer">
-        <img alt="" className="footer__logo" src={IMAGES.LOGO} />
+      <Layout.Footer className={styles.footer}>
+        <img alt="" className={styles.logo} src={IMAGES.LOGO} />
         electron-react-ant-boilerplate ©2019
-      </Footer>
+      </Layout.Footer>
     );
   }
 }
 
-export default FooterApp;
+export default Footer;
