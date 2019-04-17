@@ -1,6 +1,6 @@
 {
   "name": "electron-react-ant-boilerplate",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Electron, Webpack4, React, Babel 7, ES6, PostCSS, Sass, Ant Design",
   "license": "MIT",
   "private": false,
@@ -85,7 +85,7 @@
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-import": "^1.11.0",
-    "babel-plugin-relative-path-import": "^2.0.1",
+    "babel-plugin-root-import": "^6.1.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "babili-webpack-plugin": "^0.1.2",
     "brotli-webpack-plugin": "^1.1.0",

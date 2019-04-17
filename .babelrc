@@ -13,14 +13,11 @@
     "@babel/transform-runtime",
     "react-hot-loader/babel",
     [
-      "babel-plugin-relative-path-import",
+      "babel-plugin-root-import",
+
       {
-        "paths": [
-          {
-            "rootPathPrefix": "@",
-            "rootPathSuffix": "src"
-          }
-        ]
+        "rootPathPrefix": "@",
+        "rootPathSuffix": "./src"
       }
     ]
   ],
