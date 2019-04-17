@@ -1,6 +1,6 @@
 {
   "name": "electron-react-ant-boilerplate",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Electron, Webpack4, React, Babel 7, ES6, PostCSS, Sass, Ant Design",
   "license": "MIT",
   "private": false,

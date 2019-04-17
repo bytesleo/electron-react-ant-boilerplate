@@ -1,6 +1,6 @@
 // Libs
 import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 // Screens
 import Home from "@/screens/Home/Home";
 

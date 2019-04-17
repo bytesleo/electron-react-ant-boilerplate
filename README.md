@@ -51,14 +51,14 @@ yarn
 #### Run the app
 
 ```
-npm run start
+npm start
 ```
 or
 ```
 yarn start
 ```
 
-#### Build the app (manual)
+#### Build (manual)
 
 ```
 npm run build
@@ -68,7 +68,7 @@ or
 yarn build
 ```
 
-#### Test the app (Production)
+#### Test (Preview App)
 
 ```
 npm run prod

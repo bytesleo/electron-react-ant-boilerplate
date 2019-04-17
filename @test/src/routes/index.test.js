@@ -4,11 +4,11 @@ import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
 // Module
-import Routes from "@/routes";
+import Root from "@/routes/Root";
 
 describe("Routes", () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<Routes />);
+    const component = shallow(<Root />);
     expect(toJson(component)).toMatchSnapshot();
   });
 });
