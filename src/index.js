@@ -10,7 +10,7 @@ const App = Root;
 render(<App />, document.getElementById("root"));
 
 if (module.hot) {
-  module.hot.accept("@/routes/Root", () => {
+  module.hot.accept("./routes/Root", () => {
     require("@/routes/Root");
     render(<App />, document.getElementById("root"));
   });
