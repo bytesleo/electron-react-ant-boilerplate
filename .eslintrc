@@ -16,12 +16,13 @@
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
-    "semi": [2, "always"],
-    "indent": ["error", 2],
-    "object-curly-spacing": ["error", "always"],
+    "no-console": "off",
+    "no-undef": "warn",
+    "no-undefined": "warn",
+    "no-unused-vars": "warn",
     "no-extra-parens": ["error", "all", { "ignoreJSX": "all" }],
-    "max-len": ["error", { "code": 100 }],
-    "no-multi-spaces": "error"
+    "no-constant-condition": "warn",
+    "react/prop-types": "warn"
   },
   "settings": {
     "react": {
