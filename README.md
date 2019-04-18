@@ -48,7 +48,7 @@ yarn
 
 ### Usage
 
-#### Run the app
+#### Run
 
 ```
 npm start
@@ -68,7 +68,7 @@ or
 yarn build
 ```
 
-#### Test (Preview App)
+#### Prod (Preview in Production)
 
 ```
 npm run prod
@@ -91,11 +91,11 @@ yarn package
 #### Build package (Mac, Linux, Windows)
 
 ```
-npm run package-all
+npm run package:all
 ```
 or
 ```
-yarn package-all
+yarn package:all
 ```
 
 #### Test
@@ -108,7 +108,7 @@ or
 yarn test
 ```
 
-#### Build docs
+#### Docs
 
 ```
 npm run docs

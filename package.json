@@ -1,6 +1,6 @@
 {
   "name": "electron-react-ant-boilerplate",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Electron, Webpack4, React, Babel 7, ES6, PostCSS, Sass, Ant Design",
   "license": "MIT",
   "private": false,
@@ -47,20 +47,19 @@
   "scripts": {
     "start": "npm run env:dev -- webpack-dev-server",
     "build": "npm run env:prod -- webpack",
-    "prod": "npm run env:prod -- webpack && electron --noDevServer .",
+    "prod": "npm run build && electron --noDevServer .",
     "package": "npm run build",
-    "package-all": "npm run build",
-    "env:dev": "cross-env NODE_ENV=development",
-    "env:prod": "cross-env NODE_ENV=production",
-    "prebuild": "npm run build:clean && npm run build:copy",
-    "build:clean": "rimraf -rf dist",
-    "build:copy": "copyfiles -u 1 public/* public/**/* dist -e public/index.html",
-    "preprod": "npm run build:clean",
-    "postpackage": "electron-builder build",
-    "postpackage-all": "electron-builder build -mwl",
+    "package:all": "npm run build",
     "test": "jest -u",
     "lint": "eslint ./src",
-    "docs": "jsdoc -r ./src -d docs --verbose"
+    "docs": "jsdoc -r ./src -d docs --verbose",
+    "env:dev": "cross-env NODE_ENV=development",
+    "env:prod": "cross-env NODE_ENV=production",
+    "build:clean": "rimraf -rf dist",
+    "build:copy": "copyfiles -u 1 public/* public/**/* dist -e public/index.html",
+    "prebuild": "npm run build:clean && npm run build:copy",
+    "postpackage": "electron-builder build",
+    "postpackage:all": "electron-builder build -mwl"
   },
   "dependencies": {
     "antd": "^3.16.3",
