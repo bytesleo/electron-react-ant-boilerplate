@@ -58,6 +58,7 @@
     "build:clean": "rimraf -rf dist",
     "build:copy": "copyfiles -u 1 public/* public/**/* dist -e public/index.html",
     "prebuild": "npm run build:clean && npm run build:copy",
+    "prepackage:all": "rimraf -rf release",
     "postpackage": "electron-builder build",
     "postpackage:all": "electron-builder build -mwl"
   },
